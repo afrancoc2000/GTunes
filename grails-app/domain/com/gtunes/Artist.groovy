@@ -1,12 +1,11 @@
 package com.gtunes
 
-class Artist {
+class Artist implements Serializable{
+    Date dateCreated
+    Date lastUpdated
 
-	String name
-	
-	static hasMany = [albums: Album]
-	
-    static constraints = {
-		name blank:false 
-    }
+    String name
+    static hasMany = [albums:Album]
+
+    String toString() { name }
 }

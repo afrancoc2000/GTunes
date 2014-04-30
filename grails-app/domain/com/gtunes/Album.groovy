@@ -1,20 +1,15 @@
 package com.gtunes
 
-class Album {
-
-	String title
-	static hasMany = [songs: Song]
-	static belongsTo = [artist: Artist]
-	
+class Album implements Serializable{
+    
+    String title
+    Integer year
+    String genre
+    
     static constraints = {
-    	title blank:false 
-	}
-	
-	static mapping = {
-		songs cascade: 'delete'
-	}
-	
-	String toString() {
-		return title
-	}
+        title blank:false
+        year range:1900..2100
+    }
+
+    String toString() { title }
 }

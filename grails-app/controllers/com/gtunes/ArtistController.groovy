@@ -1,5 +1,5 @@
 package com.gtunes
 
-class SongController {
+class ArtistController {
 	def index() {}
 }
